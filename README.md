@@ -47,6 +47,21 @@ python chatbot.py
 
 The script writes its output to `eval/results.md`.
 
+## How To Run With Docker
+
+You can also run the project with Docker Compose:
+
+```powershell
+docker compose up --build
+```
+
+This starts:
+
+- `ollama`, which serves the local model on port `11434`
+- `chatbot`, which waits for Ollama, ensures `llama3.2:3b` is available, and runs the evaluation
+
+When the run finishes, the generated output will be available in `eval/results.md` on your machine.
+
 ## Notes
 
 - All inference is intended to stay local through Ollama.
